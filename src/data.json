@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Tender shrimp",
+    "description": "shrimp, champignons, mozzarella, gherkins, pickled paprika, special sauce.",
+    "picture": "1.jpg",
+    "size": [
+      {
+        "size": "25",
+        "price": "8",
+        "weight": "700"
+      },
+      {
+        "size": "30",
+        "price": "10",
+        "weight": "800"
+      },
+      {
+        "size": "40",
+        "price": "12",
+        "weight": "1000"
+      }
+    ]
+  },
+  {
+    "name": "Montana",
+    "description": "if the number of letters in this block exceeds 120, it is shortened. pepperoni, ham, hunting sausages, mozzarella, pickled paprika, jalapenos, olives, parmesan, spicy sauce.",
+    "picture": "2.jpg",
+    "size": [
+      {
+        "size": "25",
+        "price": "8",
+        "weight": "700"
+      },
+      {
+        "size": "30",
+        "price": "10",
+        "weight": "800"
+      },
+      {
+        "size": "40",
+        "price": "12",
+        "weight": "1000"
+      }
+    ]
+  },
+  {
+    "name": "Fermer",
+    "description": "chicken, mozzarella, red onion, paprika, gherkins, jalapenos, sour cream sauce, spicy chili sauce.",
+    "picture": "3.jpg",
+    "size": [
+      {
+        "size": "25",
+        "price": "8",
+        "weight": "700"
+      },
+      {
+        "size": "30",
+        "price": "10",
+        "weight": "800"
+      },
+      {
+        "size": "40",
+        "price": "12",
+        "weight": "1000"
+      }
+    ]
+  },
+  {
+    "name": "Salmone",
+    "description": "unagi salmon, chicken, mozzarella, gherkins, creamy garlic sauce, pizza sauce.",
+    "picture": "4.jpg",
+    "size": [
+      {
+        "size": "25",
+        "price": "8",
+        "weight": "700"
+      },
+      {
+        "size": "30",
+        "price": "10",
+        "weight": "800"
+      },
+      {
+        "size": "40",
+        "price": "12",
+        "weight": "1000"
+      }
+    ]
+  }
+]
