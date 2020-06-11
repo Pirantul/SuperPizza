@@ -6,18 +6,18 @@
     "size": [
       {
         "size": "25",
-        "price": "8",
+        "price": "9.50",
         "weight": "700"
       },
       {
         "size": "30",
-        "price": "10",
-        "weight": "800"
+        "price": "11.00",
+        "weight": "880"
       },
       {
         "size": "40",
-        "price": "12",
-        "weight": "1000"
+        "price": "14.30",
+        "weight": "1100"
       }
     ]
   },
@@ -28,18 +28,18 @@
     "size": [
       {
         "size": "25",
-        "price": "8",
-        "weight": "700"
+        "price": "8.20",
+        "weight": "650"
       },
       {
         "size": "30",
-        "price": "10",
+        "price": "10.50",
         "weight": "800"
       },
       {
         "size": "40",
-        "price": "12",
-        "weight": "1000"
+        "price": "12.80",
+        "weight": "980"
       }
     ]
   },
@@ -50,18 +50,23 @@
     "size": [
       {
         "size": "25",
-        "price": "8",
-        "weight": "700"
+        "price": "7.50",
+        "weight": "720"
       },
       {
         "size": "30",
-        "price": "10",
-        "weight": "800"
+        "price": "9.50",
+        "weight": "850"
       },
       {
         "size": "40",
-        "price": "12",
+        "price": "11.30",
         "weight": "1000"
+      },
+      {
+        "size": "45",
+        "price": "14.50",
+        "weight": "1200"
       }
     ]
   },
@@ -72,18 +77,115 @@
     "size": [
       {
         "size": "25",
-        "price": "8",
-        "weight": "700"
+        "price": "7.80",
+        "weight": "680"
       },
       {
         "size": "30",
-        "price": "10",
-        "weight": "800"
+        "price": "9.40",
+        "weight": "840"
       },
       {
         "size": "40",
-        "price": "12",
-        "weight": "1000"
+        "price": "12.60",
+        "weight": "930"
+      }
+    ]
+  },
+  {
+    "name": "Margarita",
+    "description": "Mozzarella, Pepperoni, Tomato pizza sauce",
+    "picture": "5.jpg",
+    "size": [
+      {
+        "size": "25",
+        "price": "7.70",
+        "weight": "630"
+      },
+      {
+        "size": "30",
+        "price": "9.10",
+        "weight": "870"
+      },
+      {
+        "size": "40",
+        "price": "12.20",
+        "weight": "990"
+      }
+    ]
+  },
+  {
+    "name": "Classic",
+    "description": "Ham, mushrooms, mozzarella, Pepperoni, Parmesan Cheese, Tomato pizza sauce",
+    "picture": "6.jpg",
+    "size": [
+      {
+        "size": "30",
+        "price": "7.90",
+        "weight": "630"
+      },
+      {
+        "size": "40",
+        "price": "9.00",
+        "weight": "870"
+      },
+      {
+        "size": "50",
+        "price": "12.00",
+        "weight": "1120"
+      },
+      {
+        "size": "60",
+        "price": "14.50",
+        "weight": "1250"
+      }
+    ]
+  },
+  {
+    "name": "Toscana",
+    "description": "Artichokes, Mushrooms, green Onions, mozzarella, Olives, Parsley, Pork",
+    "picture": "7.jpg",
+    "size": [
+      {
+        "size": "30",
+        "price": "8.40",
+        "weight": "670"
+      },
+      {
+        "size": "40",
+        "price": "9.50",
+        "weight": "890"
+      },
+      {
+        "size": "50",
+        "price": "12.50",
+        "weight": "1140"
+      },
+      {
+        "size": "60",
+        "price": "14.90",
+        "weight": "1230"
+      }
+    ]
+  },{
+    "name": "Marine",
+    "description": "Mozzarella, Tomatoes, Snow crab, cream Sauce, Tiger prawns",
+    "picture": "8.jpg",
+    "size": [
+      {
+        "size": "30",
+        "price": "8.30",
+        "weight": "690"
+      },
+      {
+        "size": "40",
+        "price": "9.70",
+        "weight": "880"
+      },
+      {
+        "size": "50",
+        "price": "12.40",
+        "weight": "1150"
       }
     ]
   }

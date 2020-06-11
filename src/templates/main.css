@@ -1,0 +1,22 @@
+@media screen and (max-width: 707px) {
+  #title > img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #title > img {
+    width: 150px;
+  }
+
+  #basket-icon {
+    width: 75px !important;
+    height: 75px !important;
+    background-size: cover;
+  }
+
+  #in-basket {
+    left: 35px !important;
+    bottom: 52px !important;
+  }
+}

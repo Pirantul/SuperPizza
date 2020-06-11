@@ -4,8 +4,10 @@ body {
 
 .product {
   width: 100%;
+  max-width: 320px;
   margin-bottom: 20px;
   border: 1px solid #dcdcdc;
+  border-radius: 8px;
 }
 
 .product:hover {
@@ -73,11 +75,36 @@ body {
   margin: 0 auto;
 }
 
-button.pressed {
-  color: #ffffff;
-  background-color: rgb(236, 59, 59);
+button.Mui-selected {
+  color: #ffffff !important;
+  background-color: #4caf50 !important;
 }
 
 button.pressed:hover {
-  color: #f50057;
+  color: #4caf50;
 }
+
+.btn-price-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.price {
+  font-size: x-large;
+  color: #e63547;
+  font-weight: bold;
+}
+
+.btn-group {
+  width: 20%;
+  padding: 6px !important;
+}
+
+.btn-sale {
+  width: 90px;
+  color: #ffffff !important;
+}
+
