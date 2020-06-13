@@ -1,24 +1,26 @@
 import React from 'react';
+import Basket from '../Basket';
 
-const BasketIcon = ({inBasket = 0}) => {
+const BasketIcon = ({basketCount}) => {
   return (
     <div  id="basket-icon" 
+          onClick={Basket.handleOpen}
           style={{
             position: "relative",
-            width: "100px",
-            height: "100px",
+            width: "75px",
+            height: "75px",
             backgroundImage: "url(/img/basket.jpg)"
             }}>
       <span id="in-basket"
           style={{
             position: "absolute",
-            left: inBasket > 9 ? "42px" : "50px" ,
-            bottom: "75px",
+            left: basketCount > 9 ? "28px" : "37px" ,
+            bottom: "52px",
             color: "#e63547",
             fontSize: "25px",
             fontWeight: "bold"
           }}>
-        {inBasket}
+        {basketCount}
       </span>
     </div>
   )

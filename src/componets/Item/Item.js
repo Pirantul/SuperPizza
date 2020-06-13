@@ -3,7 +3,7 @@ import { Button} from  "@material-ui/core";
 import { ToggleButton, ToggleButtonGroup } from  "@material-ui/lab";
 import { Col } from "react-material-responsive-grid";
 
-const Item = ({ product, onClickSizeBtn }) => {
+const Item = ({ product, onClickSale }) => {
 
   const [size, setSize] = useState(0);
   const handleSize = (event, newSize) => {
@@ -30,7 +30,7 @@ const Item = ({ product, onClickSizeBtn }) => {
                             </div>
                             <div style={{ display: "flex" }}>
                                 <div className="icon-weight"></div>
-                                <span className="weight-value">{product.size[size]?.weight}</span>
+                                <span className="weight-value">{product.sizes[size]?.weight}</span>
                             </div>
                         </div>
                     </div>
@@ -60,16 +60,20 @@ const Item = ({ product, onClickSizeBtn }) => {
                             onChange={handleSize}
                             className="centered btn"
                         >
-                          { product.size?.map((sizeItem, i) => {
+                          { product.sizes?.map((sizeItem, i) => {
                           return  <ToggleButton key={sizeItem.size} className="btn-group" value={i}>{sizeItem.size}</ToggleButton>
                         })}
                         
                         </ToggleButtonGroup>
                         <div className="btn-price-container">
-                            <Button variant="contained" className="btn-sale" color="primary">SALE</Button>
+                            <Button variant="contained" 
+                                    className="btn-sale" 
+                                    color="primary"
+                                    onClick={() => onClickSale(product, size)}
+                                    >SALE</Button>
                             <div className="price">
                                 <span>
-                                <small>€</small> {product.size[size].price}
+                                <small>€</small> {product.sizes[size].price}
                                 </span>
                             </div>
                         </div>

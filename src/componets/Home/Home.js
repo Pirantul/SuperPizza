@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Container} from '@material-ui/core';
 import { Grid, Row, Col } from 'react-material-responsive-grid';
+import { makeStyles } from '@material-ui/core/styles';
 import '../../css/style.css';
 import MainTemplate from '../../templates/Main';
 import Item from '../Item';
 import data from '../../data.json';
 
-const Home = () => {
+const Home = ({ onClickSale, basketCount}) => {
 
-  const onClickSizeBtn = () => {
-    console.log("click");
-    
-  }
+
+  const useStyles = makeStyles({
+
+    "@media (max-width: 500px)": {
+      noPadding: {
+        padding: "0"
+    } 
+    }
+  });
+
+  const classes = useStyles();
 
   return (
-    <MainTemplate >
-      <Container>
+    <MainTemplate basketCount={basketCount}>
+      <Container  className={classes.noPadding}>
         <Grid>
           <Row>
             {data.map(product => {
-              return <Item key={product.name} product={product} onClickSizeBtn={onClickSizeBtn} />
+              return <Item key={product.name} product={product} onClickSale={onClickSale} />
             })
             }
           </Row>

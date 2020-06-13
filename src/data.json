@@ -3,7 +3,7 @@
     "name": "Tender shrimp",
     "description": "shrimp, champignons, mozzarella, gherkins, pickled paprika, special sauce.",
     "picture": "1.jpg",
-    "size": [
+    "sizes": [
       {
         "size": "25",
         "price": "9.50",
@@ -25,7 +25,7 @@
     "name": "Montana",
     "description": "if the number of letters in this block exceeds 120, it is shortened. pepperoni, ham, hunting sausages, mozzarella, pickled paprika, jalapenos, olives, parmesan, spicy sauce.",
     "picture": "2.jpg",
-    "size": [
+    "sizes": [
       {
         "size": "25",
         "price": "8.20",
@@ -47,7 +47,7 @@
     "name": "Fermer",
     "description": "chicken, mozzarella, red onion, paprika, gherkins, jalapenos, sour cream sauce, spicy chili sauce.",
     "picture": "3.jpg",
-    "size": [
+    "sizes": [
       {
         "size": "25",
         "price": "7.50",
@@ -74,7 +74,7 @@
     "name": "Salmone",
     "description": "unagi salmon, chicken, mozzarella, gherkins, creamy garlic sauce, pizza sauce.",
     "picture": "4.jpg",
-    "size": [
+    "sizes": [
       {
         "size": "25",
         "price": "7.80",
@@ -96,7 +96,7 @@
     "name": "Margarita",
     "description": "Mozzarella, Pepperoni, Tomato pizza sauce",
     "picture": "5.jpg",
-    "size": [
+    "sizes": [
       {
         "size": "25",
         "price": "7.70",
@@ -118,7 +118,7 @@
     "name": "Classic",
     "description": "Ham, mushrooms, mozzarella, Pepperoni, Parmesan Cheese, Tomato pizza sauce",
     "picture": "6.jpg",
-    "size": [
+    "sizes": [
       {
         "size": "30",
         "price": "7.90",
@@ -145,7 +145,7 @@
     "name": "Toscana",
     "description": "Artichokes, Mushrooms, green Onions, mozzarella, Olives, Parsley, Pork",
     "picture": "7.jpg",
-    "size": [
+    "sizes": [
       {
         "size": "30",
         "price": "8.40",
@@ -171,7 +171,7 @@
     "name": "Marine",
     "description": "Mozzarella, Tomatoes, Snow crab, cream Sauce, Tiger prawns",
     "picture": "8.jpg",
-    "size": [
+    "sizes": [
       {
         "size": "30",
         "price": "8.30",

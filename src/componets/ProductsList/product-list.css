@@ -1,0 +1,9 @@
+.product-image-in-list {
+  width: 100px;
+}
+
+@media screen and (max-width: 707px) {
+  .product-image-in-list {
+    width: 50px;
+  }
+}

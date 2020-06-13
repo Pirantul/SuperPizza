@@ -1317,6 +1317,13 @@
     react-is "^16.8.0"
     react-transition-group "^4.4.0"
 
+"@material-ui/icons@^4.9.1":
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.9.1.tgz#fdeadf8cb3d89208945b33dbc50c7c616d0bd665"
+  integrity sha512-GBitL3oBWO0hzBhvA9KxqcowRUsA0qzwKkURyC8nppnC3fw54KPKZ+d4V1Eeg/UnDRSzDaI9nGCdel/eh9AQMg==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+
 "@material-ui/lab@^4.0.0-alpha.55":
   version "4.0.0-alpha.55"
   resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-4.0.0-alpha.55.tgz#82a850dc59654e04ee3a31be1b34eb3bf64d5585"
@@ -7125,6 +7132,13 @@ material-responsive-grid@^1.1.0:
   resolved "https://registry.yarnpkg.com/material-responsive-grid/-/material-responsive-grid-1.1.1.tgz#f31a1657bffa2d756cb279179fc846d1e44f03f2"
   integrity sha512-xSophKBPynkboqTXt54trr/do82+Zr+vg8RIaTLTday+xLoKF25gLq5FX1VL6kHOsGN8D7ArS7ubfuP/s4A+ug==
 
+material-ui-icons@^1.0.0-beta.36:
+  version "1.0.0-beta.36"
+  resolved "https://registry.yarnpkg.com/material-ui-icons/-/material-ui-icons-1.0.0-beta.36.tgz#86390a61f4c83f718eaba77ccce575834f2cf2a8"
+  integrity sha512-7rS6b2EV5QXCB/gTi/Ac9Wbxd+h9EZv1Td3rLLJe4IER8mVHRgdqZccB3EsjW2DrJ7opdY1+8X3/vyrS7CQNpg==
+  dependencies:
+    recompose "^0.26.0"
+
 material-ui@^1.0.0-beta.47:
   version "1.0.0-beta.47"
   resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.47.tgz#5deb97dc3e694299992d3c3cacb44051f8bc2166"
@@ -9648,6 +9662,16 @@ recast@^0.11.17:
     esprima "~3.1.0"
     private "~0.1.5"
     source-map "~0.5.0"
+
+recompose@^0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.26.0.tgz#9babff039cb72ba5bd17366d55d7232fbdfb2d30"
+  integrity sha512-KwOu6ztO0mN5vy3+zDcc45lgnaUoaQse/a5yLVqtzTK13czSWnFGmXbQVmnoMgDkI5POd1EwIKSbjU1V7xdZog==
+  dependencies:
+    change-emitter "^0.1.2"
+    fbjs "^0.8.1"
+    hoist-non-react-statics "^2.3.1"
+    symbol-observable "^1.0.4"
 
 "recompose@^0.26.0 || ^0.27.0":
   version "0.27.1"
