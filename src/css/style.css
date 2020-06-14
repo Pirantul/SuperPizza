@@ -94,14 +94,10 @@ button.pressed:hover {
 }
 
 .price {
-  font-size: x-large;
+  font-size: large;
   color: #e63547;
   font-weight: bold;
-}
-
-.price-list {
-  margin-left: 10px !important;
-  max-width: 70px !important;
+  margin-left: 15px;
 }
 
 .btn-group {

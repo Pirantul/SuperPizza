@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import CurrencyFormat from 'react-currency-format';
 import GroupedButtons from "../GroupedButtons";
 import CurrencyTextField from '@unicef/material-ui-currency-textfield';
 import IconButton from '@material-ui/core/IconButton';
@@ -26,6 +26,15 @@ const MyListItem = ({product, onClickChangeProduct}) => {
     onClickChangeProduct({...product, action: 'DEL'});
   };
 
+  const titleTextBig = `${product.name}, ${product.size} sm., ${product.weight} gr.`;
+  const descriptionTextBig = product.description.length > 40
+  ? product.description.substr(0, 40) + "..."
+  : product.description;
+
+  const multiplyCurrency = (a, b) => {
+    return (a * b).toFixed(2);
+  }
+  
   return (
     <ListItem key={product.name} className={classes.noPadding}>
       <ListItemAvatar>
@@ -36,30 +45,25 @@ const MyListItem = ({product, onClickChangeProduct}) => {
             className="product-image-in-list"
           />
       </ListItemAvatar>
-      <ListItemText
-        primary={`${product.name}, ${product.size} sm., ${product.weight} gr.`}
-        secondary={product.description.length > 40
-          ? product.description.substr(0, 40) + "..."
-          : product.description}
-      />
-      <GroupedButtons product={product} onClickChangeProduct={onClickChangeProduct}></GroupedButtons>
-      <CurrencyTextField
-        label=""
-        variant="standard"
-        value={product.price * product.count}
-        currencySymbol="€"
-        readOnly= "true"
-        //minimumValue="0"
-        outputFormat="string"
-        decimalCharacter="."
-        digitGroupSeparator=","
-        style={{maxWidth: '75px', marginLeft:"10px"}}
+      <div className="list-item-title">
+        <ListItemText
+          primary={ document.body.clientWidth > 646 ? titleTextBig : product.name }
+          secondary={ document.body.clientWidth > 646 ? descriptionTextBig : `${product.size} sm., ${product.weight} gr.` }
         />
-      <ListItemSecondaryAction onClick={onClickDelete}>
-          <IconButton edge="end" aria-label="delete">
-            <DeleteIcon />
-          </IconButton>
-      </ListItemSecondaryAction>
+      </div>
+      <div className="list-item-property">
+        <GroupedButtons product={product} onClickChangeProduct={onClickChangeProduct}></GroupedButtons>
+        <div className="list-item-line">
+          <div className="price">
+            <CurrencyFormat prefix={'€'} displayType={'text'} value={ multiplyCurrency(product.price, product.count )}  />
+          </div>
+          <div style={{marginTop: "-12px"}}>
+            <IconButton edge="end" aria-label="delete" onClick={onClickDelete}>
+              <DeleteIcon />
+            </IconButton>
+          </div>
+        </div>
+      </div>
     </ListItem>
   )
 }

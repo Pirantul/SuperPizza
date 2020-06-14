@@ -4,13 +4,11 @@ import ListItem from "../ListItem";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-import './product-list.css';
-
 export default function ProductsList({ productsInBasket, onClickChangeProduct }) {
 
     return (
-      <Grid container spacing={2} justify="center">
-          <Grid item xs={12} md={6}>
+      <Grid container spacing={1} justify="center">
+          <Grid item sm={12} md={10} lg={8}>
               <Typography variant="h6">
                   Your order:
               </Typography>
