@@ -10,39 +10,51 @@ function App() {
 
   const onClickSale = ( {name, description, picture, sizes}, i) => {
     
+    const size = sizes[i].size;
+    const weight = sizes[i].weight;
+    const price = sizes[i].price;
+
     setBasketCount(basketCount + 1);
+    onClickChangeProduct({name, description, picture, size, weight, price, action: 'INC'})
+  }
 
-    const includeInBasket = productsInBasket.filter(prodObj => {
-      return (prodObj.name === name && prodObj.size === sizes[i].size)
-    });
-    let count = includeInBasket[0]?.count;
+  const onClickChangeProduct = ( {name, description, picture, size, weight, price, action}) => {
     
-    if (count) {
-      const withoutThisObj = productsInBasket.filter(prodObj => {
-        return !(prodObj.name === name && prodObj.size === sizes[i].size)
-      });
-      count++
+    let count = productsInBasket.filter(prodObj => {
+      return (prodObj.name === name && prodObj.size === size)
+    })[0]?.count;
+    
+    let productsForUpdate = productsInBasket;
 
+    if (count) {
+      productsForUpdate = productsInBasket.filter(prodObj => {
+        return !(prodObj.name === name && prodObj.size === size)
+      });
+      if (action === 'INC') {
+        count++;
+        setBasketCount(basketCount + 1);
+      }
+      if (action === 'DEC' && count > 1) {
+        count--;
+        setBasketCount(basketCount - 1);
+      }
+    } 
+
+    if (action === 'DEL') {
+      setBasketCount(basketCount - count);
       setProductsInBasket([
-        ...withoutThisObj, {
-        name, 
-        description, 
-        picture, 
-        size: sizes[i].size, 
-        weight: sizes[i].weight, 
-        price: sizes[i].price,
-        count: count
-      }])
+        ...productsForUpdate
+      ])
     } else {
       setProductsInBasket([
-        ...productsInBasket, {
+        ...productsForUpdate, {
         name, 
         description, 
         picture, 
-        size: sizes[i].size, 
-        weight: sizes[i].weight, 
-        price: sizes[i].price,
-        count: 1
+        size, 
+        weight, 
+        price,
+        count: count ? count : 1
       }])
     }
   }
@@ -51,7 +63,7 @@ function App() {
     <HashRouter>
       <Switch>
         <Route exact path='/' render={ () => <Home basketCount={basketCount} onClickSale={onClickSale} />} />
-        <Route path='/basket' render={ () => <Basket basketCount={basketCount} productsInBasket={productsInBasket} />} />
+        <Route path='/basket' render={ () => <Basket basketCount={basketCount} productsInBasket={productsInBasket} onClickChangeProduct={onClickChangeProduct} />} />
       </Switch>
     </HashRouter>
   );

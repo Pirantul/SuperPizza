@@ -3,29 +3,22 @@ import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 class GroupedButtons extends React.Component {
-
-  constructor (props) {
-    super(props);
-    this.state = { counter: props.count };
-  }
   
   handleIncrement = () => {
-    this.setState(state => ({ counter: state.counter + 1 }));
+    this.props.onClickChangeProduct({...this.props.product, action: 'INC'});
   };
 
   handleDecrement = () => {
-    this.setState(state => ({ counter: state.counter - 1 }));
+    this.props.onClickChangeProduct({...this.props.product, action: 'DEC'});
   };
   render() {
-    const displayCounter = this.state.counter > 0;
+    const displayCounter = this.props.product.count > 0;
 
     return (
       <ButtonGroup size="small" aria-label="small outlined button group">
         {displayCounter && <Button onClick={this.handleDecrement}>-</Button>}
-        {displayCounter && <Button >{this.state.counter}</Button>}
+        {displayCounter && <Button >{this.props.product.count}</Button>}
         <Button onClick={this.handleIncrement}>+</Button>
-        
-        
       </ButtonGroup>
     );
   }

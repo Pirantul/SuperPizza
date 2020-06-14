@@ -7,6 +7,7 @@ const Item = ({ product, onClickSale }) => {
 
   const [size, setSize] = useState(0);
   const handleSize = (event, newSize) => {
+    if (newSize === null) return;    
     setSize(newSize);
   };
 
