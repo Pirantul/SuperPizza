@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import List from "@material-ui/core/List";
 import ListItem from "../ListItem";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Total from "../Total/Total";
 
-export default function ProductsList({ total, productsInBasket, onClickChangeProduct }) {
+export default function ProductsList({ total, productsInBasket, onClickChangeProduct, sendOrder }) {
 
     return (
       <Grid container spacing={1} justify="center">
@@ -21,7 +21,7 @@ export default function ProductsList({ total, productsInBasket, onClickChangePro
                       <ListItem key={product.name} product={product} onClickChangeProduct={onClickChangeProduct} />
                     ))}
               </List>
-              <Total total={total} />
+              <Total total={total} sendOrder={sendOrder} productsInBasket={productsInBasket} />
           </Grid>
       </Grid>
     );

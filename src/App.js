@@ -7,7 +7,7 @@ function App() {
 
   const [productsInBasket, setProductsInBasket] = useState([]);
   const [basketCount, setBasketCount] = useState(0);
-  const  [total, setTotal] = useState('0');
+  const [total, setTotal] = useState(0);
 
   const onClickSale = ( {name, description, picture, sizes}, i) => {
     
@@ -71,11 +71,25 @@ function App() {
     setTotal((+summ).toFixed(2));
   }
   
+  const sendOrder = () => {
+    /*
+    * Now only clean Order ))
+    */
+    
+    setProductsInBasket([]);
+    setBasketCount(0);
+    setTotal(0);
+  }
+
   return (
     <HashRouter>
       <Switch>
         <Route exact path='/' render={ () => <Home basketCount={basketCount} onClickSale={onClickSale} />} />
-        <Route path='/basket' render={ () => <Basket total={total} basketCount={basketCount} productsInBasket={productsInBasket} onClickChangeProduct={onClickChangeProduct} />} />
+        <Route path='/basket' render={ () => <Basket  total={total} 
+                                                      basketCount={basketCount} 
+                                                      productsInBasket={productsInBasket} 
+                                                      onClickChangeProduct={onClickChangeProduct}
+                                                      sendOrder={sendOrder} />} />
       </Switch>
     </HashRouter>
   );

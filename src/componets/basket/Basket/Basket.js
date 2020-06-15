@@ -4,7 +4,7 @@ import MainTemplate from '../../../templates/Main';
 import ProductsList from '../ProductsList/ProduktsList';
 import { makeStyles } from '@material-ui/core/styles';
 
-const Basket = ({ total, basketCount, productsInBasket, onClickChangeProduct }) => {
+const Basket = ({ total, basketCount, productsInBasket, onClickChangeProduct, sendOrder }) => {
 
   const useStyles = makeStyles({
 
@@ -20,7 +20,7 @@ const Basket = ({ total, basketCount, productsInBasket, onClickChangeProduct }) 
   return (
     <MainTemplate basketCount={basketCount}>
       <Container  className={classes.noPadding}>
-        <ProductsList total={total}  productsInBasket={productsInBasket} onClickChangeProduct={onClickChangeProduct} />
+        <ProductsList total={total} productsInBasket={productsInBasket} onClickChangeProduct={onClickChangeProduct} sendOrder={sendOrder} />
       </Container>
     </MainTemplate>
   )

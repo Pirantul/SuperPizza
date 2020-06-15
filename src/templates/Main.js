@@ -21,7 +21,7 @@ const MainTemplate = ({children, basketCount}) => {
   return (
     <Container className={classes.noPadding}>
       <div id="title" style={{display: "flex", justifyContent: "space-between", margin: "30px"}}>
-        <Link to="/" style={{width: "234px", height: "111px"}}><img src='/img/logo.svg' /></Link>  
+        <Link to="/" style={{width: "234px", height: "111px"}}><img src='/img/logo.svg' alt='' /></Link>  
         <Link to="/basket" style={{width: "75px", height: "75px"}}><BasketIcon basketCount={basketCount} /></Link>
       </div>
       {children}

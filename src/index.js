@@ -4,7 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'typeface-roboto';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { red, green, blue } from 'material-ui/colors';
+import { red, green } from 'material-ui/colors';
 
 const theme = createMuiTheme({
   palette: {

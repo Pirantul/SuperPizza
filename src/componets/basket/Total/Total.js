@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import CurrencyFormat from 'react-currency-format';
 import getCurrencyRate from '../../../currency-rate.json';
 import OrderForm from '../Basket/OrderForm/OrderForm';
+import ConfirmForm from '../Basket/ConfirmForm/ConfirmForm';
 
-const Total = ({total}) => {
+const Total = ({total, sendOrder, productsInBasket}) => {
 
   const [open, setOpen] = React.useState(false);
+  const [confirmOpen, setConfirmOpen] = React.useState(false);
   const visibled = +total > 0 ? 'visible' : 'hidden';
 
   const handleClickOpen = () => {
@@ -16,6 +18,16 @@ const Total = ({total}) => {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleSend = () => {
+    setOpen(false);
+    setConfirmOpen(true);
+  };
+
+  const handleClickConfirmClose = () => {
+    setConfirmOpen(false);
+    sendOrder();
   };
   
   return (
@@ -26,10 +38,16 @@ const Total = ({total}) => {
           <Button variant="contained" 
                   className="btn-sale" 
                   color="secondary"
+                  style={{visibility: "visible"}}
                   >BACK
           </Button>
         </Link>
-        <OrderForm open={open} handleClickOpen={handleClickOpen} handleClose={handleClose} />
+        <ConfirmForm confirmOpen={confirmOpen} handleClickConfirmClose={handleClickConfirmClose} productsInBasket={productsInBasket} />
+        <OrderForm  open={open} 
+                    handleSend={handleSend} 
+                    handleClickOpen={handleClickOpen} 
+                    handleClose={handleClose} 
+                    />
         <div style={{ display: "flex", 
                       fontSize: "1.25rem", 
                       justifyContent: "flex-end" 
