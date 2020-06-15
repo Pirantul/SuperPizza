@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-import Home from './componets/Home';
-import Basket from './componets/Basket';
+import Home from './componets/home/Home';
+import Basket from './componets/basket/Basket';
 
 function App() {
 
   const [productsInBasket, setProductsInBasket] = useState([]);
   const [basketCount, setBasketCount] = useState(0);
+  const  [total, setTotal] = useState('0');
 
   const onClickSale = ( {name, description, picture, sizes}, i) => {
     
@@ -42,11 +43,10 @@ function App() {
 
     if (action === 'DEL') {
       setBasketCount(basketCount - count);
-      setProductsInBasket([
-        ...productsForUpdate
-      ])
     } else {
-      setProductsInBasket([
+      count = count ? count : 1;
+
+      productsForUpdate = [
         ...productsForUpdate, {
         name, 
         description, 
@@ -54,16 +54,28 @@ function App() {
         size, 
         weight, 
         price,
-        count: count ? count : 1
-      }])
+        count: count
+      }];
     }
+    setProductsInBasket([
+      ...productsForUpdate
+    ])
+    setTotalValue(productsForUpdate);
   }
 
+  const setTotalValue = (products) => {
+    const summ = products.reduce((sum, product) => {
+        sum = +sum + (+product.price) * +product.count;
+        return sum;
+    }, []);
+    setTotal((+summ).toFixed(2));
+  }
+  
   return (
     <HashRouter>
       <Switch>
         <Route exact path='/' render={ () => <Home basketCount={basketCount} onClickSale={onClickSale} />} />
-        <Route path='/basket' render={ () => <Basket basketCount={basketCount} productsInBasket={productsInBasket} onClickChangeProduct={onClickChangeProduct} />} />
+        <Route path='/basket' render={ () => <Basket total={total} basketCount={basketCount} productsInBasket={productsInBasket} onClickChangeProduct={onClickChangeProduct} />} />
       </Switch>
     </HashRouter>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import Basket from '../Basket';
+import Basket from '../../basket/Basket';
 
 const BasketIcon = ({basketCount}) => {
   return (

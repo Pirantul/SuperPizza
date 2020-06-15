@@ -67,7 +67,7 @@ const Item = ({ product, onClickSale }) => {
                         
                         </ToggleButtonGroup>
                         <div className="btn-price-container">
-                            <Button variant="contained" 
+                            <Button variant="outlined" 
                                     className="btn-sale" 
                                     color="primary"
                                     onClick={() => onClickSale(product, size)}

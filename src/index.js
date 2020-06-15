@@ -9,8 +9,7 @@ import { red, green, blue } from 'material-ui/colors';
 const theme = createMuiTheme({
   palette: {
     primary: green,
-    secondary: blue,
-    error: red,
+    secondary: red
   },
 });
 

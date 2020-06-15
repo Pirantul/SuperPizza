@@ -1,10 +1,10 @@
 import React from 'react';
 import {Container} from '@material-ui/core';
-import MainTemplate from '../../templates/Main';
+import MainTemplate from '../../../templates/Main';
 import ProductsList from '../ProductsList/ProduktsList';
 import { makeStyles } from '@material-ui/core/styles';
 
-const Basket = ({ basketCount, productsInBasket, onClickChangeProduct }) => {
+const Basket = ({ total, basketCount, productsInBasket, onClickChangeProduct }) => {
 
   const useStyles = makeStyles({
 
@@ -20,7 +20,7 @@ const Basket = ({ basketCount, productsInBasket, onClickChangeProduct }) => {
   return (
     <MainTemplate basketCount={basketCount}>
       <Container  className={classes.noPadding}>
-        <ProductsList productsInBasket={productsInBasket} onClickChangeProduct={onClickChangeProduct} />
+        <ProductsList total={total}  productsInBasket={productsInBasket} onClickChangeProduct={onClickChangeProduct} />
       </Container>
     </MainTemplate>
   )

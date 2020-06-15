@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Container} from '@material-ui/core';
-import { Grid, Row, Col } from 'react-material-responsive-grid';
+import { Grid, Row } from 'react-material-responsive-grid';
 import { makeStyles } from '@material-ui/core/styles';
-import '../../css/style.css';
-import MainTemplate from '../../templates/Main';
+import '../../../css/style.css';
+import MainTemplate from '../../../templates/Main';
 import Item from '../Item';
-import data from '../../data.json';
+import data from '../../../data.json';
 
 const Home = ({ onClickSale, basketCount}) => {
 

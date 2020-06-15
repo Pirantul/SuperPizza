@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import List from "@material-ui/core/List";
 import ListItem from "../ListItem";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import Total from "../Total/Total";
 
-export default function ProductsList({ productsInBasket, onClickChangeProduct }) {
+export default function ProductsList({ total, productsInBasket, onClickChangeProduct }) {
 
     return (
       <Grid container spacing={1} justify="center">
@@ -17,9 +18,10 @@ export default function ProductsList({ productsInBasket, onClickChangeProduct })
                   {productsInBasket
                     .sort((a, b) => a.name + a.size > b.name + b.size ? 1 : -1)
                     .map((product) => (
-                      <ListItem product={product} onClickChangeProduct={onClickChangeProduct} />
+                      <ListItem key={product.name} product={product} onClickChangeProduct={onClickChangeProduct} />
                     ))}
               </List>
+              <Total total={total} />
           </Grid>
       </Grid>
     );

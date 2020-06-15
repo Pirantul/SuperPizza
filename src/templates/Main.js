@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import {Container} from '@material-ui/core';
-import BasketIcon from '../componets/BasketIcon';
+import BasketIcon from '../componets/home/BasketIcon';
 import { makeStyles } from '@material-ui/core/styles';
 import './main.css';
 
