@@ -71,7 +71,7 @@ const Item = ({ product, onClickSale }) => {
                                     className="btn-sale" 
                                     color="primary"
                                     onClick={() => onClickSale(product, size)}
-                                    >SALE</Button>
+                                    >BUY</Button>
                             <div className="price">
                                 <span>
                                 <small>€</small> {product.sizes[size].price}
