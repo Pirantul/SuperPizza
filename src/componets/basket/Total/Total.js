@@ -53,16 +53,18 @@ const Total = ({total, sendOrder, productsInBasket}) => {
                       justifyContent: "flex-end" 
                       }}>
             Total:
-            <div className="price" style={{ fontSize: "1.25rem" }}>
-              <CurrencyFormat prefix={'€'} 
+            <div id="total-price-line">
+              <div className="price" style={{ fontSize: "1.25rem" }}>
+                <CurrencyFormat prefix={'€'} 
+                                displayType={'text'} 
+                                value={ (+total).toFixed(2) }  />
+              </div>
+              <CurrencyFormat prefix={'$ ('} 
+                              suffix={')'} 
                               displayType={'text'} 
-                              value={ (+total).toFixed(2) }  />
+                              value={ (+total * getCurrencyRate.EURUSD).toFixed(2) } 
+                              style={{fontSize:"1rem", marginLeft: "10px", lineHeight: "1.75rem"}} />
             </div>
-            <CurrencyFormat prefix={'$ ('} 
-                            suffix={')'} 
-                            displayType={'text'} 
-                            value={ (+total * getCurrencyRate.EURUSD).toFixed(2) } 
-                            style={{fontSize:"1rem", marginLeft: "10px", lineHeight: "1.75rem"}} />
           </div>
 
         </div>
