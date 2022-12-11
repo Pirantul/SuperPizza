@@ -4036,14 +4036,6 @@ dot-case@^3.0.3:
     no-case "^3.0.3"
     tslib "^1.10.0"
 
-dot-object@^1.7.1:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/dot-object/-/dot-object-1.9.0.tgz#6e3d6d8379f794c5174599ddf05528f5990f076e"
-  integrity sha512-7MPN6y7XhAO4vM4eguj5+5HNKLjJYfkVG1ZR1Aput4Q4TR6SYeSjhpVQ77IzJHoSHffKbDxBC+48aCiiRurDPw==
-  dependencies:
-    commander "^2.20.0"
-    glob "^7.1.4"
-
 dot-prop@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-5.2.0.tgz#c34ecc29556dc45f1f4c22697b6f4904e0cc4fcb"
@@ -9172,9 +9164,9 @@ qs@6.7.0:
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-  integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
+  integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
 query-string@^4.1.0:
   version "4.3.4"
@@ -9593,24 +9585,6 @@ react-transition-group@^4.4.0:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
-
-react-validation-framework@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/react-validation-framework/-/react-validation-framework-5.1.0.tgz#7754ee114d69863004031c0f4e9c22610b1d08fa"
-  integrity sha512-dqXny7AdMC9yRmEm7iwG6odu6MTGhN3VQ5SQwa4HFR5n372xb4sX++Veb/S6bfN8YeuuvOZFO+88mmnDRF8LSA==
-  dependencies:
-    prop-types "^15.6.1"
-    react "16.1.1"
-
-react@16.1.1:
-  version "16.1.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.1.1.tgz#d5c4ef795507e3012282dd51261ff9c0e824fe1f"
-  integrity sha512-FQfiFfk2z2Fk87OngNJHT05KyC9DOVn8LPeB7ZX+9u5+yU1JK6o5ozRlU3PeOMr0IFkWNvgn9jU8/IhRxR1F0g==
-  dependencies:
-    fbjs "^0.8.16"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.0"
 
 react@^0.13.1:
   version "0.13.3"
