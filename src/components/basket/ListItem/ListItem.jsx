@@ -25,7 +25,7 @@ export default function BasketListItem({ product, onChangeProduct }) {
   const lineTotal = (Number(product.price) * product.count).toFixed(2);
 
   return (
-    <ListItem className="layout-no-padding" alignItems="flex-start">
+    <ListItem className="layout-no-padding basket-list-item" alignItems="center">
       <ListItemAvatar>
         <img
           src={`/img/${product.picture}`}
@@ -46,14 +46,14 @@ export default function BasketListItem({ product, onChangeProduct }) {
       <div className="list-item-property">
         <GroupedButtons product={product} onChangeProduct={onChangeProduct} />
         <div className="list-item-line">
-          <div className="price">
-            {formatCurrency(lineTotal)}
-          </div>
-          <div style={{ marginTop: "-12px" }}>
-            <IconButton edge="end" aria-label={`Remove ${product.name}`} onClick={onClickDelete}>
-              <DeleteIcon />
-            </IconButton>
-          </div>
+          <div className="price">{formatCurrency(lineTotal)}</div>
+          <IconButton
+            edge="end"
+            aria-label={`Remove ${product.name}`}
+            onClick={onClickDelete}
+          >
+            <DeleteIcon />
+          </IconButton>
         </div>
       </div>
     </ListItem>

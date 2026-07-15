@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15"><path fill="#F11C11" fill-rule="evenodd" d="M7.98 4.137H6.336v-.95c0-.038-.004-.076-.006-.114h.178a1.32 1.32 0 0 0 0-2.643H2.736a1.32 1.32 0 0 0-1.319 1.321c0 .73.461 1.322 1.19 1.322h.292c-.002.038-.005.076-.005.115v.95H1.02A1.028 1.028 0 0 0 0 5.171v8.142c0 .57.459 1.035 1.02 1.035h6.96A1.03 1.03 0 0 0 9 13.313V5.172a1.03 1.03 0 0 0-1.02-1.035"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" role="img" aria-label="Weight">
+  <!-- ketchup / bottle icon (original redraw) -->
+  <path fill="#e63547" d="M3.1 0.4h2.8c0.5 0 0.9 0.4 0.9 0.9v1.2c0 0.3-0.1 0.5-0.3 0.7L5.8 4H3.2L2.5 3.2C2.3 3 2.2 2.8 2.2 2.5V1.3c0-0.5 0.4-0.9 0.9-0.9z"/>
+  <rect x="0.8" y="4" width="7.4" height="10.2" rx="1.1" fill="#e63547"/>
+  <rect x="2" y="5.2" width="5" height="1.2" rx="0.4" fill="#ff9a9a" opacity="0.35"/>
+</svg>

@@ -1,6 +1,16 @@
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 
+const qtyBtnSx = {
+  minWidth: 36,
+  color: "#2f3647",
+  "&.Mui-disabled": {
+    color: "#8a93a3",
+    borderColor: "rgba(0, 0, 0, 0.23)",
+    opacity: 1,
+  },
+};
+
 export default function GroupedButtons({ product, onChangeProduct }) {
   const handleIncrement = () => {
     onChangeProduct(product, "INC");
@@ -11,10 +21,24 @@ export default function GroupedButtons({ product, onChangeProduct }) {
   };
 
   return (
-    <ButtonGroup size="small" aria-label={`Quantity for ${product.name}`}>
-      {product.count > 1 && <Button onClick={handleDecrement}>-</Button>}
-      <Button disabled>{product.count}</Button>
-      <Button onClick={handleIncrement}>+</Button>
+    <ButtonGroup
+      size="small"
+      className="qty-buttons"
+      aria-label={`Quantity for ${product.name}`}
+    >
+      <Button
+        onClick={handleDecrement}
+        disabled={product.count <= 1}
+        sx={qtyBtnSx}
+      >
+        −
+      </Button>
+      <Button disabled sx={qtyBtnSx}>
+        {product.count}
+      </Button>
+      <Button onClick={handleIncrement} sx={qtyBtnSx}>
+        +
+      </Button>
     </ButtonGroup>
   );
 }
