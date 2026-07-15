@@ -31,20 +31,20 @@
 
 .layout-basket-link {
   display: block;
-  width: 75px;
-  height: 75px;
+  width: 150px;
+  height: 150px;
 }
 
 .basket-icon {
   position: relative;
-  width: 75px;
-  height: 75px;
+  width: 150px;
+  height: 150px;
 }
 
 .basket-icon__img {
   display: block;
-  width: 75px;
-  height: 75px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
 }
 
@@ -116,8 +116,8 @@
 
 #in-basket {
   position: absolute;
-  left: 50%;
-  top: -10px;
+  left: 38%;
+  top: 32px;
   transform: translateX(-50%);
   color: #e63547;
   font-size: 22px;
@@ -238,15 +238,17 @@
     flex-direction: column;
   }
 
+  .layout-basket-link,
   .basket-icon,
   .basket-icon__img,
   #basket-icon {
-    width: 50px !important;
-    height: 50px !important;
+    width: 100px !important;
+    height: 100px !important;
   }
 
   #in-basket {
-    top: -8px !important;
+    top: 18px !important;
+    left: 36% !important;
     font-size: 16px !important;
   }
 
