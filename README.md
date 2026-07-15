@@ -9,7 +9,7 @@
 
 > **Keywords:** react pizza shop · food delivery demo · shopping cart react · material ui e-commerce · pizza menu app · react spa demo · vite react
 
-**Live demo:** https://pizza.rusgil.ru
+**Live demo:** https://demos.gilazoff.com/pizza/
 
 ---
 
