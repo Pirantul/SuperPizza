@@ -48,7 +48,7 @@ a {
   width: 9px;
   height: 15px;
   margin: 1px 5px;
-  background-image: url(/img/weight.svg);
+  background-image: var(--weight-icon, url(/img/weight.svg));
 }
 
 .product-image {

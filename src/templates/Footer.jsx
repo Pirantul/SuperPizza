@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import packageJson from "../../package.json";
+import { assetUrl } from "../utils/assetUrl";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -9,7 +10,7 @@ export default function Footer() {
       <div className="site-footer__inner">
         <div className="site-footer__brand">
           <img
-            src="/img/logo.jpg"
+            src={assetUrl("img/logo.jpg")}
             alt=""
             className="site-footer__logo"
             aria-hidden="true"

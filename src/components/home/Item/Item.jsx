@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "@mui/material/Button";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { assetUrl } from "../../../utils/assetUrl";
 
 export default function Item({ product, onAddToCart }) {
   const [sizeIndex, setSizeIndex] = useState(0);
@@ -17,7 +18,7 @@ export default function Item({ product, onAddToCart }) {
     <div className="product centered">
       <div style={{ margin: "auto" }}>
         <img
-          src={`/img/${product.picture}`}
+          src={assetUrl(`img/${product.picture}`)}
           alt={product.name}
           title={product.name}
           className="product-image"

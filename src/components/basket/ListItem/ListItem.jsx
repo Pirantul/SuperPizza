@@ -2,6 +2,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import { formatCurrency } from "../../../utils/formatCurrency";
+import { assetUrl } from "../../../utils/assetUrl";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -28,7 +29,7 @@ export default function BasketListItem({ product, onChangeProduct }) {
     <ListItem className="layout-no-padding basket-list-item" alignItems="center">
       <ListItemAvatar>
         <img
-          src={`/img/${product.picture}`}
+          src={assetUrl(`img/${product.picture}`)}
           alt={product.name}
           title={product.name}
           className="product-image-in-list"

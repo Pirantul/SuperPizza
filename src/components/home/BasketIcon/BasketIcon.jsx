@@ -1,8 +1,10 @@
+import { assetUrl } from "../../../utils/assetUrl";
+
 export default function BasketIcon({ basketCount }) {
   return (
     <div id="basket-icon" className="basket-icon">
       <img
-        src="/img/basket.jpg"
+        src={assetUrl("img/basket.jpg")}
         alt=""
         className="basket-icon__img"
         width={75}

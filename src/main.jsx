@@ -3,6 +3,12 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import App from "./App";
+import { assetUrl } from "./utils/assetUrl";
+
+document.documentElement.style.setProperty(
+  "--weight-icon",
+  `url(${assetUrl("img/weight.svg")})`
+);
 
 const theme = createTheme({
   palette: {
